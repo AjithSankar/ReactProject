@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 
 function Course(props) {
 
@@ -18,5 +20,13 @@ function Course(props) {
         );
     }
 }
+
+Course.propTypes = {
+    image: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    rating: PropTypes.string.isRequired,
+    show: PropTypes.bool
+};
 
 export default Course;
