@@ -3,22 +3,18 @@ import PropTypes from 'prop-types';
 
 function Course(props) {
 
-    if (props.show == true) {
-
-        return (
+    // Render the course card only if the name prop is provided
+    return (
+        props.name && (
             <div className="card">
                 <img src={props.image} alt="" />
                 <h3>{props.name}</h3>
                 <p>{props.price}</p>
                 <span>{props.rating}</span>
             </div>
-        );
+        )
+    );
 
-    } else {
-        return (
-            <div className="card">Course Not available</div>
-        );
-    }
 }
 
 Course.propTypes = {
